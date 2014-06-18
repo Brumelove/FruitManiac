@@ -6,15 +6,20 @@
 
 
 	//Add Global Declarations Here
-
+	Minim minim;
 	GameEngine appEngine;
 	TuioProcessing tuioClient;
 	Panel panelApp;
 	FWorld FisicaWorld; //Global Access usage anywhere
 	boolean isFisicaRunning;
+	AudioPlayer introSong;
+	AudioPlayer levelSong;
         
 	void setup(){
-
+	minim=new Minim(this);
+	introSong=minim.loadFile("sounds/game.mp3");
+	levelSong=minim.loadFile("sounds/level.mp3");
+	introSong.loop();
 	size(800,600);
         isFisicaRunning=false;
 	Fisica.init(this); 

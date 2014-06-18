@@ -42,6 +42,8 @@
             public void setup(){
                try 
                {
+                    introSong.pause();
+                    levelSong.loop();
                    isFisicaRunning=true;
                    _background=loadImage("widescreen.png");
                    animBG=loadImage("ui/ScoreSkin.png");

@@ -33,6 +33,8 @@ public void contactStartedEvent(){
             int xpos,ypos=0;
 		public void setup(){
 		try {
+				  introSong.loop();
+                    levelSong.pause();
 				nutrientImages=new HashMap();
 				nutrientImages.put("apple",loadImage("nutrients/Apple.jpg"));
 				nutrientImages.put("mango",loadImage("nutrients/Mango.jpg"));
